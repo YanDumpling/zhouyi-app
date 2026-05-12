@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicegui/nicegui/main/nicegui/static/tauri-2.x-schema.json",
+  "identifier": "default",
+  "description": "Default capability",
+  "windows": ["main"],
+  "permissions": [
+    "core:default"
+  ]
+}

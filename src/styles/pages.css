@@ -1,0 +1,797 @@
+/* ====== HomePage ====== */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 48px 24px 32px;
+  background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 40%);
+}
+
+.home-header {
+  text-align: center;
+}
+
+.app-title {
+  font-size: var(--font-xl);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.home-hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.hexagram-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 40px;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: opacity 0.5s ease;
+}
+
+.preview-symbol {
+  font-size: 3rem;
+  line-height: 1.4;
+}
+
+.preview-name {
+  font-size: var(--font-md);
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+.slogan {
+  text-align: center;
+}
+
+.slogan p {
+  font-size: var(--font-md);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.home-actions {
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: white;
+  font-size: var(--font-lg);
+  font-weight: 600;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  letter-spacing: 0.05em;
+}
+
+.btn-primary:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+
+.home-footer {
+  margin-top: 24px;
+}
+
+.btn-link {
+  background: none;
+  color: var(--color-text-secondary);
+  font-size: var(--font-sm);
+  padding: 8px 16px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn-link:hover {
+  color: var(--color-primary);
+}
+
+/* ====== ResultPage ====== */
+
+.result-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-primary-light);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.btn-back {
+  background: none;
+  color: var(--color-primary);
+  font-size: var(--font-sm);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.btn-back:hover {
+  background: var(--color-primary-light);
+}
+
+.header-title {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.header-spacer {
+  width: 40px;
+}
+
+.result-content {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.section-label {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Hexagram Card */
+
+.hexagram-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.hexagram-symbol {
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+.hexagram-name {
+  font-size: var(--font-xl);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+}
+
+.hexagram-desc {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+  text-align: center;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.hexagram-vernacular {
+  font-size: var(--font-md);
+  color: var(--color-text);
+  text-align: center;
+  line-height: 1.8;
+  margin-top: 4px;
+}
+
+/* Yao Lines */
+
+.yao-lines {
+  width: 100%;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+}
+
+.yao-line {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.yao-line.changing {
+  background: #FFF3E4;
+  border: 1px solid var(--color-accent);
+}
+
+.yao-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.yao-text {
+  margin-top: 6px;
+  padding-left: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.yao-original {
+  font-size: var(--font-sm);
+  color: var(--color-primary-dark);
+  font-weight: 500;
+}
+
+.yao-vernacular {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.yao-pos {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+  min-width: 36px;
+}
+
+.yao-type {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+  min-width: 56px;
+}
+
+.yao-bar {
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
+  font-family: monospace;
+}
+
+/* Changing Info */
+
+.changing-info {
+  font-size: var(--font-md);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* Transformed */
+
+.hexagram-card.transformed {
+  border: 1px dashed var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+/* Interpretations */
+
+.interpretations-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.interpretation-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.interpretation-card h4 {
+  font-size: var(--font-md);
+  color: var(--color-primary-dark);
+  margin-bottom: 8px;
+}
+
+.interpretation-card p {
+  font-size: var(--font-md);
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+/* ====== Coin Animation ====== */
+
+.coin-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 50%);
+  padding: 32px;
+}
+
+.coin-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.coin-row {
+  display: flex;
+  gap: 20px;
+  perspective: 500px;
+}
+
+.coin {
+  width: 64px;
+  height: 64px;
+  position: relative;
+}
+
+.coin.flipping .coin-inner {
+  animation: coinFlip 0.8s ease-in-out infinite;
+}
+
+.coin.dropped .coin-inner {
+  animation: coinDrop 0.3s ease-out forwards;
+}
+
+.coin-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.coin-front,
+.coin-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  backface-visibility: hidden;
+  border: 2px solid #D4A854;
+}
+
+.coin-front {
+  background: linear-gradient(135deg, #FDE68A, #F59E0B);
+  color: #92400E;
+}
+
+.coin-back {
+  background: linear-gradient(135deg, #FDE68A, #D97706);
+  color: #92400E;
+  transform: rotateY(180deg);
+}
+
+@keyframes coinFlip {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(720deg); }
+}
+
+@keyframes coinDrop {
+  0% { transform: rotateY(0deg); opacity: 0.7; }
+  100% { transform: rotateY(360deg); opacity: 1; }
+}
+
+.coin-result {
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(8px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.round-info {
+  text-align: center;
+}
+
+.round-label {
+  font-size: var(--font-md);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+.lines-display {
+  font-size: 1.3rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.3em;
+  margin-top: 4px;
+}
+
+.divination-done {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.divination-done p {
+  font-size: var(--font-xl);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+}
+
+/* ====== Loading (keep for backward compatibility) ====== */
+
+.loading-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg);
+  gap: 16px;
+}
+
+.loading-symbol {
+  font-size: 3rem;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.loading-text {
+  font-size: var(--font-md);
+  color: var(--color-text-secondary);
+}
+
+/* ====== HistoryPage ====== */
+
+.history-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.history-content {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.history-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--color-text-secondary);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  opacity: 0.4;
+}
+
+.empty-text {
+  font-size: var(--font-lg);
+  font-weight: 600;
+}
+
+.empty-hint {
+  font-size: var(--font-sm);
+  opacity: 0.6;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.history-item:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.history-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.history-symbol {
+  font-size: 1.8rem;
+}
+
+.history-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.history-name {
+  font-size: var(--font-md);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.history-time {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+}
+
+.history-item-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.history-badge {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  background: #FFF3E4;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.history-delete {
+  background: none;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  opacity: 0.5;
+}
+
+.history-delete:hover {
+  opacity: 1;
+  background: #FEE2E2;
+  color: #EF4444;
+}
+
+.history-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.btn-clear {
+  background: none;
+  color: var(--color-text-secondary);
+  font-size: var(--font-sm);
+  padding: 8px 20px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+}
+
+.btn-clear:hover {
+  color: #EF4444;
+  border-color: #FECACA;
+  background: #FEF2F2;
+}
+
+/* ====== Changing Line Detail ====== */
+
+.changing-detail-card {
+  background: #FFFBF0;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.changing-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.changing-badge {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  background: #FFF3E4;
+  padding: 2px 12px;
+  border-radius: 12px;
+}
+
+.changing-line-text {
+  font-size: var(--font-md);
+  color: var(--color-primary-dark);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.changing-line-ver {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ====== Combined Interpretations ====== */
+
+.interp-main {
+  font-size: var(--font-md);
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.interp-changing {
+  border-top: 1px dashed var(--color-accent);
+  padding-top: 12px;
+  margin-bottom: 12px;
+}
+
+.interp-changing-label {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 6px;
+}
+
+.interp-line-hint {
+  font-size: var(--font-sm);
+  color: var(--color-primary-dark);
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.interp-transformed {
+  border-top: 1px dashed var(--color-primary);
+  padding-top: 12px;
+}
+
+.interp-transformed-label {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.interp-transformed p {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* ====== Share Button ====== */
+
+.share-section {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 24px;
+}
+
+.btn-share {
+  width: 100%;
+  max-width: 280px;
+  padding: 12px 0;
+  background: var(--color-white);
+  color: var(--color-primary);
+  font-size: var(--font-md);
+  font-weight: 600;
+  border: 2px solid var(--color-primary);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.btn-share:hover {
+  background: var(--color-primary-light);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ====== Mobile Responsive ====== */
+
+@media (max-width: 480px) {
+  .home-page {
+    padding: 32px 16px 24px;
+  }
+
+  .hexagram-preview {
+    padding: 20px 32px;
+  }
+
+  .preview-symbol {
+    font-size: 2.5rem;
+  }
+
+  .home-actions {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .btn-primary {
+    font-size: var(--font-md);
+    padding: 14px 0;
+  }
+
+  .slogan p {
+    font-size: var(--font-sm);
+  }
+
+  .result-content {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .hexagram-card {
+    padding: 20px 16px;
+  }
+
+  .hexagram-symbol {
+    font-size: 2.5rem;
+  }
+
+  .hexagram-name {
+    font-size: 1.3rem;
+  }
+
+  .hexagram-vernacular {
+    font-size: var(--font-sm);
+  }
+
+  .interpretation-card {
+    padding: 16px;
+  }
+
+  .interpretation-card p {
+    font-size: var(--font-sm);
+    line-height: 1.7;
+  }
+
+  .history-item {
+    padding: 12px;
+  }
+
+  .history-symbol {
+    font-size: 1.5rem;
+  }
+
+  .btn-share {
+    max-width: 100%;
+  }
+
+  .coin {
+    width: 52px;
+    height: 52px;
+  }
+
+  .coin-front,
+  .coin-back {
+    font-size: 22px;
+  }
+}
