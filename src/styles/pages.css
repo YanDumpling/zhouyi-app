@@ -714,11 +714,11 @@
   box-shadow: var(--shadow-hover);
 }
 
-/* ====== Mobile Responsive ====== */
+/* ====== Mobile Responsive (iPhone + Android) ====== */
 
 @media (max-width: 480px) {
   .home-page {
-    padding: 32px 16px 24px;
+    padding: calc(32px + env(safe-area-inset-top, 0px)) 16px calc(24px + env(safe-area-inset-bottom, 0px));
   }
 
   .hexagram-preview {
@@ -726,7 +726,7 @@
   }
 
   .preview-symbol {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .home-actions {
@@ -735,16 +735,22 @@
   }
 
   .btn-primary {
-    font-size: var(--font-md);
-    padding: 14px 0;
+    font-size: var(--font-lg);
+    padding: 16px 0;
+    border-radius: 28px;
   }
 
   .slogan p {
     font-size: var(--font-sm);
   }
 
+  /* Result page */
+  .result-header {
+    padding-top: calc(12px + env(safe-area-inset-top, 0px));
+  }
+
   .result-content {
-    padding: 12px;
+    padding: 12px 12px calc(24px + env(safe-area-inset-bottom, 0px));
     gap: 12px;
   }
 
@@ -753,7 +759,7 @@
   }
 
   .hexagram-symbol {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .hexagram-name {
@@ -773,25 +779,65 @@
     line-height: 1.7;
   }
 
+  .history-page {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
   .history-item {
-    padding: 12px;
+    padding: 14px 12px;
   }
 
   .history-symbol {
     font-size: 1.5rem;
   }
 
+  /* Share */
   .btn-share {
     max-width: 100%;
+    padding: 14px 0;
+    font-size: var(--font-md);
   }
 
+  .share-section {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* Coin animation */
   .coin {
-    width: 52px;
-    height: 52px;
+    width: 56px;
+    height: 56px;
   }
 
   .coin-front,
   .coin-back {
-    font-size: 22px;
+    font-size: 24px;
+  }
+
+  .coin-row {
+    gap: 16px;
+  }
+}
+
+/* iPhone SE / 小型手机 */
+@media (max-width: 375px) {
+  .preview-symbol {
+    font-size: 2.4rem;
+  }
+
+  .hexagram-preview {
+    padding: 16px 24px;
+  }
+
+  .btn-primary {
+    padding: 14px 0;
+    font-size: var(--font-md);
+  }
+
+  .hexagram-symbol {
+    font-size: 2.4rem;
+  }
+
+  .hexagram-card {
+    padding: 16px 12px;
   }
 }
